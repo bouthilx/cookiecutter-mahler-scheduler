@@ -1,0 +1,14 @@
+{
+    "plugin_name": "",
+    "author_name": "",
+    "author_short": "{{ cookiecutter.author_name }}",
+    "author_email": "",
+    "github_username": "",
+    "copyright": "{% now 'utc', '%Y' %}, {{ cookiecutter.author_name }}",
+    "short_description": "TODO",
+    "synopsis": "TODO",
+    "ressource_class_name": "{{ cookiecutter.plugin_name|capitalize }}Ressources",
+    "ressource_name": "{{ cookiecutter.ressource_class_name|lower }}",
+    "entry_point": "{{ cookiecutter.ressource_class_name }}",
+    "_extensions": ["jinja2_time.TimeExtension"]
+}
