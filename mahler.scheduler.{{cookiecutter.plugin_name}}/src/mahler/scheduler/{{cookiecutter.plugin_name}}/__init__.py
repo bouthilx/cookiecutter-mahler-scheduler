@@ -22,3 +22,18 @@ __author_short__ = u'{{ cookiecutter.author_short }}'
 __author_email__ = '{{ cookiecutter.author_email }}'
 __copyright__ = u'{{ cookiecutter.copyright }}'
 __url__ = 'https://github.com/{{ cookiecutter.github_username }}/mahler.scheduler.{{ cookiecutter.plugin_name }}'
+
+
+def build(*args, **kwargs):
+    """Build the Resource object"""
+    return {{ cookiecutter.resource_class_name }}(*args, **kwargs)
+
+
+def build_parser(parser):
+    """Return the parser that needs to be used for this command"""
+    {{ cookiecutter.commandline_name }}_parser = parser.add_parser('{{ cookiecutter.commandline_name }}', help='{{ cookiecutter.commandline_name }} help')
+
+    # Add arguments...
+    # {{ cookiecutter.commandline_name }}_parser.add_argument(
+    #     '--processes', type=int, default=CPU_COUNT,
+    #     help='number of concurrent process to spawn. Default: number of CPUs available')

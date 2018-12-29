@@ -7,6 +7,7 @@
     "copyright": "{% now 'utc', '%Y' %}, {{ cookiecutter.author_name }}",
     "short_description": "TODO",
     "synopsis": "TODO",
+    "commandline_name": "{{ cookiecutter.plugin_name }}",
     "resource_class_name": "{{ cookiecutter.plugin_name|capitalize }}Resources",
     "_extensions": ["jinja2_time.TimeExtension"],
     "_copy_without_render": [
