@@ -1,4 +1,4 @@
-""" Test the laboratorium facility Cookiecutter template.
+""" Test the mahler scheduler Cookiecutter template.
 
 A template project is created in a temporary directory, the application is
 installed into a self-contained venv environment, and the application test 

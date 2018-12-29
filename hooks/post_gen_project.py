@@ -46,17 +46,18 @@ def remove_temp_folders(temp_folders):
         logger.info("Remove temporary folder: %s", folder)
         shutil.rmtree(folder)
 
+def init_vcs():
+    subprocess.run("git init", shell=True, check=True)
+    subprocess.run("git add --all", shell=True, check=True)
+
+
 def run_versioneer():
-    print(os.getcwd())
-    subprocess.run("ls -l .", shell=True, check=True)
-    subprocess.run("ls -l src", shell=True, check=True)
-    subprocess.run("ls -l src/laboratorium", shell=True, check=True)
-    subprocess.run("ls -l src/laboratorium/facility", shell=True, check=True)
-    subprocess.run("ls -l src/laboratorium/facility/local", shell=True, check=True)
     subprocess.run("versioneer install", shell=True, check=True)
+    subprocess.run("git commit -m 'Creation with cookiecutter'", shell=True, check=True)
 
 
 if __name__ == "__main__":
     # move_docs_files("\{\{cookiecutter.docs_tool\}\}", DOCS_FILES_BY_TOOL, DOCS_SOURCES)
     remove_temp_folders(ALL_TEMP_FOLDERS)
+    init_vcs()
     run_versioneer()

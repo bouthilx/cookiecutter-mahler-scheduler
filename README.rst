@@ -1,9 +1,9 @@
-==============================
-Laboratorium Facility Template
-==============================
+=========================
+Mahler Scheduler Template
+=========================
 
- .. _travis: https://travis-ci.org/bouthilx/cookiecutter-laboratorium-facility
- .. |travis.png| image:: https://travis-ci.org/bouthilx/cookiecutter-laboratorium-facility.png
+ .. _travis: https://travis-ci.org/bouthilx/cookiecutter-mahler-scheduler
+ .. |travis.png| image:: https://travis-ci.org/bouthilx/cookiecutter-mahler-scheduler.png
     :alt: Travis CI build status
     :target: `travis`_
 
@@ -14,13 +14,13 @@ Laboratorium Facility Template
 .. _Packaging a Python library: http://blog.ionelmc.ro/2014/05/25/python-packaging
 
 
-This is a `Cookiecutter`_ template for creating a Laboratorium Facility Plugin.
+This is a `Cookiecutter`_ template for creating a Mahler Scheduler Plugin.
 
 
 Usage
 =====
 
-.. _GitHub: https://github.com/bouthilx/cookiecutter-laboratorium-facility
+.. _GitHub: https://github.com/bouthilx/cookiecutter-mahler-scheduler
 
 
 Install Python requirements for using the template:
@@ -34,4 +34,4 @@ Create a new project directly from the template on `GitHub`_:
 
 .. code-block:: console
    
-    $ cookiecutter gh:bouthilx/cookiecutter-laboratorium-facility --output-dir '..'
+    $ cookiecutter gh:bouthilx/cookiecutter-mahler-scheduler --output-dir '..'

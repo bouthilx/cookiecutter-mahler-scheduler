@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# laboratorium.facility.{{ cookiecutter.plugin_name }} documentation build configuration file.
+# mahler.scheduler.{{ cookiecutter.plugin_name }} documentation build configuration file.
 #
 # This file is execfile()d with the current directory set to its
 # containing dir.
@@ -25,7 +25,7 @@ sys.path.insert(0, docs_src_path)
 src_path = os.path.abspath(os.path.join(docs_src_path, '..', '..', 'src'))
 sys.path.insert(0, src_path)
 
-import laboratorium.facility.{{ cookiecutter.plugin_name }} as facility_plugin
+import mahler.scheduler.{{ cookiecutter.plugin_name }} as scheduler_plugin
 
 # -- General configuration ------------------------------------------------
 
@@ -62,10 +62,10 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'laboratorium.facility.{{ cookiecutter.plugin_name }}'
-_full_version = facility_plugin.__version__
-copyright = facility_plugin.__copyright__
-author = facility_plugin.__author__
+project = u'mahler.scheduler.{{ cookiecutter.plugin_name }}'
+_full_version = scheduler_plugin.__version__
+copyright = scheduler_plugin.__copyright__
+author = scheduler_plugin.__author__
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -259,8 +259,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  (master_doc, 'laboratorium.facility.{{ cookiecutter.plugin_name}}.tex',
-   u'Laboratorium facility {{ cookiecutter.plugin_name }} Documentation',
+  (master_doc, 'mahler.scheduler.{{ cookiecutter.plugin_name}}.tex',
+   u'Mahler scheduler {{ cookiecutter.plugin_name }} Documentation',
    u'{{ cookiecutter.author_name }}', 'manual'),
 ]
 
@@ -291,7 +291,7 @@ latex_documents = [
 # (source start file, name, description, authors, manual section).
 man_pages = [
     (master_doc, 'projectname',
-     u'Laboratorium facility {{ cookiecutter.plugin_name }} Documentation',
+     u'Mahler scheduler {{ cookiecutter.plugin_name }} Documentation',
      [author], 1)
 ]
 
@@ -306,8 +306,8 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
   (master_doc, '{{ cookiecutter.plugin_name }}',
-   u'Laboratorium facility {{ cookiecutter.plugin_name }} Documentation',
-   author, '{{ cookiecutter.plugin_name }}', facility_plugin.__descr__,
+   u'Mahler scheduler {{ cookiecutter.plugin_name }} Documentation',
+   author, '{{ cookiecutter.plugin_name }}', scheduler_plugin.__descr__,
    'Miscellaneous'),
 ]
 

@@ -1,44 +1,37 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""Installation script for `laboratorium.facility.{{ cookiecutter.plugin_name }}`."""
+"""Installation script for `mahler.scheduler.{{ cookiecutter.plugin_name }}`."""
 import os
-import sys
 
 from setuptools import setup
 
 import versioneer
 
-isfile = os.path.isfile
-pjoin = os.path.join
+
 repo_root = os.path.dirname(os.path.abspath(__file__))
-mpath = pjoin(repo_root, 'src')
-sys.path.insert(0, mpath)
-
-import laboratorium.facility.{{ cookiecutter.plugin_name }}
-
 
 tests_require = ['pytest>=3.0.0']
 
 setup_args = dict(
-    name='laboratorium.facility.{{ cookiecutter.plugin_name }}',
+    name='mahler.scheduler.{{ cookiecutter.plugin_name }}',
     version=versioneer.get_version(),
     cmdclass=versioneer.get_cmdclass(),
-    description=laboratorium.facility.{{ cookiecutter.plugin_name }}.__descr__,
+    description='{{ cookiecutter.short_description }}',
     long_description=open(os.path.join(repo_root, "README.rst")).read(),
-    license=laboratorium.facility.{{ cookiecutter.plugin_name }}.__license__,
-    author=laboratorium.facility.{{ cookiecutter.plugin_name }}.__author__,
-    author_email=laboratorium.facility.{{ cookiecutter.plugin_name }}.__author_email__,
-    url=laboratorium.facility.{{ cookiecutter.plugin_name }}.__url__,
-    packages=['laboratorium.facility.{{ cookiecutter.plugin_name }}'],
+    license='GNU GPLv3',
+    author=u'{{ cookiecutter.author_name }}',
+    author_email='{{ cookiecutter.author_email }}',
+    url='https://github.com/{{ cookiecutter.github_username }}/mahler.scheduler.{{ cookiecutter.plugin_name }}',
+    packages=['mahler.scheduler.{{ cookiecutter.plugin_name }}'],
     package_dir={'': 'src'},
     include_package_data=True,
     # data_files=find_data_files(),
     entry_points={
-        '{{ cookiecutter.entry_point }}': [
-            '{{ cookiecutter.ressource_name }} = laboratorium.facility.{{ cookiecutter.plugin_name }}.ressources:{{ cookiecutter.ressource_class_name }}'
+        'Scheduler': [
+            '{{ cookiecutter.plugin_name }} = mahler.scheduler.{{ cookiecutter.plugin_name }}'
             ],
         },
-    install_requires=['laboratorium.core'],
+    install_requires=['mahler.core'],
     tests_require=tests_require,
     setup_requires=['setuptools', 'pytest-runner>=2.0,<3dev'],
     extras_require=dict(test=tests_require),
