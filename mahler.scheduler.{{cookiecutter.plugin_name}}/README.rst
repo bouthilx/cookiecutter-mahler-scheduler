@@ -51,9 +51,9 @@ Requirements
 Installation
 ------------
 
-You can install "pytest-{{cookiecutter.plugin_name}}" via `pip`_ from `PyPI`_::
+You can install "mahler.scheduler.{{cookiecutter.plugin_name}}" via `pip`_ from `PyPI`_::
 
-    $ pip install pytest-{{cookiecutter.plugin_name}}
+    $ pip install git+https://github.com/{{ cookiecutter.github_username }}/mahler.scheduler.{{cookiecutter.plugin_name}}.git
 
 
 Usage
